@@ -14,12 +14,14 @@ while True:
         print(f'Sorted numbers: {numbers}')
 
         l = len(numbers) #length 
+
         if l%2 == 1:
-            median = numbers[l//2]
+            median = numbers[l//2] #if odd no. elements, median is middle element
 
         else:
-            med1 = numbers[l//2]
-            med2 = numbers[(l//2)-1]
-            median = [(med1 + med2)/2]
+            med1 = numbers[l//2] #if even no. elements, median is average of two middle elements
+            med2 = numbers[l//2-1]
+            median = (med1 + med2)/2
+
+        print(f'The median of the list of inputs you have given is: {median}')
         break
-print(f'The median of the list of inputs you have given is: {median}')
